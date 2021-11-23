@@ -78,6 +78,8 @@ public abstract class AbstractRefreshableConfigApplicationContext extends Abstra
 			Assert.noNullElements(locations, "Config locations must not be null");
 			this.configLocations = new String[locations.length];
 			for (int i = 0; i < locations.length; i++) {
+				//resolvePath是解析配置文件中的占位符号，如:spring-${username}.xml，
+				//从环境变量中找这个username变量
 				this.configLocations[i] = resolvePath(locations[i]).trim();
 			}
 		}

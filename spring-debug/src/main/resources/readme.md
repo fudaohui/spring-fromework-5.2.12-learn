@@ -1,0 +1,1 @@
+1.FourTypeBeanTest 演示了四中创建bean的方式

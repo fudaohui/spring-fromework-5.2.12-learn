@@ -1,4 +1,6 @@
-package com.fdh.test;
+package com.fdh.test.part1;
+
+import org.springframework.stereotype.Component;
 
 /**
  * 〈功能概述〉<br>
@@ -6,7 +8,8 @@ package com.fdh.test;
  * @author: fudaohui
  * @date: 2021-11-04 17:38
  */
-public class Student {
+//@Component
+public class Student  extends Person{
 
 	private String name;
 
@@ -18,10 +21,19 @@ public class Student {
 		this.name = name;
 	}
 
+	public Student() {
+		super();
+	}
+
 	@Override
 	public String toString() {
 		return "Student{" +
 				"name='" + name + '\'' +
 				'}';
+	}
+
+	@Override
+	protected void say() {
+		System.out.println("Student");
 	}
 }
