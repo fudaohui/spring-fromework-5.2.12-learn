@@ -6,7 +6,7 @@ import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * 〈功能概述〉<br>
+ * factory创建bean演示<br>
  *
  * @author: fudaohui
  * @date: 2021-11-23 18:02

@@ -140,6 +140,7 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 
 		super(parent);
 		setConfigLocations(configLocations);
+		//所谓的刷新上下文，其实就是重新从配置中读取beanDefiniton注册进去，并重新根据beanDefiniton创建bean
 		if (refresh) {
 			refresh();
 		}
