@@ -1,4 +1,4 @@
-package com.fdh.test.part2;
+package com.fdh.test.p2_factorybean;
 
 /**
  * 〈功能概述〉<br>

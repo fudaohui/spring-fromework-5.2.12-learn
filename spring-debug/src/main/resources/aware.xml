@@ -8,8 +8,7 @@
 
 	<context:component-scan base-package="com.fdh"></context:component-scan>
 
-	<bean id="student" class="com.fdh.test.p2_createbeantype.Student">
-		<property name="name" value="daemon"/>
-	</bean>
+	<bean id="student" class="com.fdh.test.p3_aware.Student"/>
+	<bean id="myBeanFactoryAware" class="com.fdh.test.p3_aware.MyBeanFactoryAware"/>
 
 </beans>

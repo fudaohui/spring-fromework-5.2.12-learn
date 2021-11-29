@@ -1,6 +1,4 @@
-package com.fdh.test.part1;
-
-import org.springframework.stereotype.Component;
+package com.fdh.test.p2_createbeantype;
 
 /**
  * 〈功能概述〉<br>
