@@ -24,6 +24,13 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.lang.Nullable;
 
 /**
+ * 上下文中央接口,提供了以下能力<p>
+ *     1、BeanFactory容器的能力<br>
+ *     2、文件资源加载能力<br>
+ *     3、事件发布能力<br>
+ *     4、消息资源国际化能力
+ *
+ *     <p>
  * Central interface to provide configuration for an application.
  * This is read-only while the application is running, but may be
  * reloaded if the implementation supports this.

@@ -31,3 +31,4 @@ bean容器的根接口，定义了一些涉及bean的方法，如getBean(String 
 8. DefaultListableBeanFactory<br>
    继承自 AbstractAutowireCapableBeanFactory
    实现了 ConfigurableListableBeanFactory, BeanDefinitionRegistry。因此具备了上述类和接口的能力，即多了beanDefiniton的增删改查的能力
+   

@@ -26,6 +26,9 @@ import org.springframework.context.ApplicationContextException;
 import org.springframework.lang.Nullable;
 
 /**
+ * ApplicationContext实现的基类，提供了refreshBeanFactory的功能，并提供了loadBeanDefinitions抽象方法，之类应该去
+ * 实现<p>
+ *
  * Base class for {@link org.springframework.context.ApplicationContext}
  * implementations which are supposed to support multiple calls to {@link #refresh()},
  * creating a new internal bean factory instance every time.

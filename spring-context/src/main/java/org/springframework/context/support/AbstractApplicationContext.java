@@ -84,6 +84,10 @@ import org.springframework.util.ObjectUtils;
 import org.springframework.util.ReflectionUtils;
 
 /**
+ * ApplicationContext的抽象是是实现类<p></p>
+ * 使用了模板方法设计模式（子类应该实现并覆盖抽象方法）,简单实现了普通上下文功能<br>
+ * 主要实现了自动祖册一些特色的bean,如： BeanFactoryPostProcessors, BeanPostProcessors, and ApplicationListeners
+ * <p>
  * Abstract implementation of the {@link org.springframework.context.ApplicationContext}
  * interface. Doesn't mandate the type of storage used for configuration; simply
  * implements common context functionality. Uses the Template Method design pattern,
@@ -235,6 +239,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * @param parent the parent context
 	 */
 	public AbstractApplicationContext(@Nullable ApplicationContext parent) {
+		//创建了资源模式处理器
 		this();
 		setParent(parent);
 	}
@@ -465,6 +470,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	//---------------------------------------------------------------------
 
 	/**
+	 * 设置父上下文，若非空，将合并Environment<p>
 	 * Set the parent of this application context.
 	 * <p>The parent {@linkplain ApplicationContext#getEnvironment() environment} is
 	 * {@linkplain ConfigurableEnvironment#merge(ConfigurableEnvironment) merged} with
@@ -1411,6 +1417,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	protected abstract void closeBeanFactory();
 
 	/**
+	 * 子类必须在这里返回其内部bean工厂。他们应该高效地实现查找，这样就可以重复调用它而不会造成性能损失<p>
 	 * Subclasses must return their internal bean factory here. They should implement the
 	 * lookup efficiently, so that it can be called repeatedly without a performance penalty.
 	 * <p>Note: Subclasses should check whether the context is still active before
