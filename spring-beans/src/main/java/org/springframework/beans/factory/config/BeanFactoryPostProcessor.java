@@ -19,6 +19,8 @@ package org.springframework.beans.factory.config;
 import org.springframework.beans.BeansException;
 
 /**
+ *
+ * BFPP:可以自定义修改BeanFactory（以及bean的属性值）里面的BeanDefinition（在实例化之前）<p>
  * Factory hook that allows for custom modification of an application context's
  * bean definitions, adapting the bean property values of the context's underlying
  * bean factory.
