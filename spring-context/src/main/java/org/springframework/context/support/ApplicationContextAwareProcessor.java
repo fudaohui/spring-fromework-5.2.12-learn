@@ -34,6 +34,9 @@ import org.springframework.lang.Nullable;
 import org.springframework.util.StringValueResolver;
 
 /**
+ *  后置处理器的实现类，主要为了实现了EnvironmentAware，EmbeddedValueResolverAware等Aware接口的实现类bean提供
+ *  对应的Aware<p>
+ *
  * {@link BeanPostProcessor} implementation that supplies the {@code ApplicationContext},
  * {@link org.springframework.core.env.Environment Environment}, or
  * {@link StringValueResolver} for the {@code ApplicationContext} to beans that

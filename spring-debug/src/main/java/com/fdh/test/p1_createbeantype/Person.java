@@ -1,4 +1,4 @@
-package com.fdh.test.p2_createbeantype;
+package com.fdh.test.p1_createbeantype;
 
 /**
  * 〈功能概述〉<br>

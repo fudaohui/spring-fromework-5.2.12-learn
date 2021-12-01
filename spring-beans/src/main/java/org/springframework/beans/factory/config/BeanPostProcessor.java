@@ -20,6 +20,12 @@ import org.springframework.beans.BeansException;
 import org.springframework.lang.Nullable;
 
 /**
+ * Bean的后置处理器，主要用来修改bean的。例如检查标记接口，或者使用代理包装bean<p>
+ * 一般是被BeanFacory注册和执行。注意自动检测的BeanPostProcessor根据PriorityOrdered等顺序执行，
+ * 代码编程手动register进去的忽略PriorityOrdered的顺序，根据注册顺序<p>
+ * 注意！！：执行的时机取决于bean的类型，普通的bean在实例化之后初始化之前，代理包装的bean在初始化之后执行该BeanPostProceesor<p>
+ *
+ * <p>
  * Factory hook that allows for custom modification of new bean instances &mdash;
  * for example, checking for marker interfaces or wrapping beans with proxies.
  *
